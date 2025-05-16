@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revelador del CT COCIENTE TRICEREBRAL - Para jóvenes y adultos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+ <!-- ... tus otros meta y link tags ... -->
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- AÑADIR ESTO -->
+</head>
+<body>
+    <div class="test-wrapper">
+        <header class="main-header">
+            <h1>Revelador del CT</h1>
+            <h2>COCIENTE TRICEREBRAL</h2>
+            <p class="target-audience">- Para adultos -</p>
+        </header>
+
+        <div class="test-container">
+            <p class="instructions">
+                <strong>Instrucciones:</strong> Evalúese con notas de <strong>1 (mínimo)</strong> hasta <strong>5 (máximo)</strong> y escríbalas dentro de la figura que corresponde.
+            </p>
+
+            <form id="cocienteTricerebralForm">
+                <table class="questions-table">
+                    <thead>
+                        <tr>
+                            <th class="col-num">Nº</th>
+                            <th class="col-pregunta">Pregunta</th>
+                            <th class="col-figura">
+                                <div class="shape-icon square-icon" title="Columna Cuadrado"></div>
+                            </th>
+                            <th class="col-figura">
+                                <div class="shape-icon triangle-icon" title="Columna Triángulo"></div>
+                            </th>
+                            <th class="col-figura">
+                                <div class="shape-icon circle-icon" title="Columna Círculo"></div>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Pregunta 1 -->
+                        <tr>
+                            <td>1</td>
+                            <td>Al final del día, de la semana, o de una actividad, ¿haces revisión y evaluación?</td>
+                            <td><input type="number" name="q1_sq" min="1" max="5" class="score-input"></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <!-- Pregunta 2 -->
+                        <tr>
+                            <td>2</td>
+                            <td>En tu casa, en tu habitación, en tu lugar de trabajo, ¿hay orden?</td>
+                            <td></td>
+                            <td><input type="number" name="q2_tr" min="1" max="5" class="score-input"></td>
+                            <td></td>
+                        </tr>
+                        <!-- Pregunta 3 -->
+                        <tr>
+                            <td>3</td>
+                            <td>¿Crees que tu cuerpo, tu energía son parte de un todo mayor, de alguna fuerza superior, invisible, espiritual y eterna?</td>
+                            <td></td>
+                            <td></td>
+                            <td><input type="number" name="q3_ci" min="1" max="5" class="score-input"></td>
+                        </tr>
+                        <!-- Pregunta 4 -->
+                        <tr>
+                            <td>4</td>
+                            <td>¿Sabes contar chistes? ¿Vives alegre, optimista y disfrutando a pesar de todo?</td>
+                            <td></td>
+                            <td></td>
+                            <td><input type="number" name="q4_ci" min="1" max="5" class="score-input"></td>
+                        </tr>
+                        <!-- Pregunta 5 -->
+                        <tr>
+                            <td>5</td>
+                            <td>Dialogando o discutiendo, ¿tienes buenas explicaciones, argumentos, sabes rebatir?</td>
+                            <td><input type="number" name="q5_sq" min="1" max="5" class="score-input"></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <!-- Pregunta 6 -->
+                        <tr>
+                            <td>6</td>
+                            <td>¿Tienes presentimientos, premoniciones, sueños nocturnos que se hacen realidad?</td>
+                            <td></td>
+                            <td></td>
+                            <td><input type="number" name="q6_ci" min="1" max="5" class="score-input"></td>
+                        </tr>
+                        <!-- Pregunta 7 -->
+                        <tr>
+                            <td>7</td>
+                            <td>En la relación afectiva, ¿te comprometes a fondo con romanticismo y pasión?</td>
+                            <td></td>
+                            <td></td>
+                            <td><input type="number" name="q7_ci" min="1" max="5" class="score-input"></td>
+                        </tr>
+                        <!-- Pregunta 8 -->
+                        <tr>
+                            <td>8</td>
+                            <td>¿Sabes hablar frente a un grupo, dominas las palabras con fluidez y corrección?</td>
+                            <td><input type="number" name="q8_sq" min="1" max="5" class="score-input"></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <!-- Pregunta 9 -->
+                        <tr>
+                            <td>9</td>
+                            <td>Cuando te comunicas personalmente, ¿gesticulas, mueves el cuerpo, miras a todos los presentes?</td>
+                            <td></td>
+                            <td></td>
+                            <td><input type="number" name="q9_ci" min="1" max="5" class="score-input"></td>
+                        </tr>
+                        <!-- Pregunta 10 -->
+                        <tr>
+                            <td>10</td>
+                            <td>¿Te puedes imaginar en lugar de otra persona y sentir como ella se siente?</td>
+                            <td></td>
+                            <td></td>
+                            <td><input type="number" name="q10_ci" min="1" max="5" class="score-input"></td>
+                        </tr>
+                        <!-- Pregunta 11 -->
+                        <tr>
+                            <td>11</td>
+                            <td>¿Sabes alinear los pros y contras de un problema, logras discernirlos y emitir juicios correctos?</td>
+                            <td><input type="number" name="q11_sq" min="1" max="5" class="score-input"></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <!-- Pregunta 12 -->
+                        <tr>
+                            <td>12</td>
+                            <td>¿Cuándo narras un hecho incluyes muchos detalles, te gusta dar todos los pormenores?</td>
+                            <td><input type="number" name="q12_sq" min="1" max="5" class="score-input"></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <!-- Pregunta 13 -->
+                        <tr>
+                            <td>13</td>
+                            <td>¿Al comprar o vender sales bien, tienes ventajas, ganas plata?</td>
+                            <td></td>
+                            <td><input type="number" name="q13_tr" min="1" max="5" class="score-input"></td>
+                            <td></td>
+                        </tr>
+                        <!-- Pregunta 14 -->
+                        <tr>
+                            <td>14</td>
+                            <td>¿Te gusta innovar, cambiar la rutina de la vida, del ambiente, tienes soluciones creativas y originales?</td>
+                            <td></td>
+                            <td><input type="number" name="q14_tr" min="1" max="5" class="score-input"></td>
+                            <td></td>
+                        </tr>
+                        <!-- Pregunta 15 -->
+                        <tr>
+                            <td>15</td>
+                            <td>¿Controlas tus ímpetus y te detienes a tiempo para pensar en las consecuencias antes de actuar?</td>
+                            <td><input type="number" name="q15_sq" min="1" max="5" class="score-input"></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <!-- Pregunta 16 -->
+                        <tr>
+                            <td>16</td>
+                            <td>Antes de aceptar cualquier información como verdadera ¿te dedicas a recoger más datos y a averiguar las fuentes?</td>
+                            <td><input type="number" name="q16_sq" min="1" max="5" class="score-input"></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <!-- Pregunta 17 -->
+                        <tr>
+                            <td>17</td>
+                            <td>¿Qué consciencia y disciplina tienes de lo que comes y bebes, del descanso, del sueño y de los ejercicios físicos?</td>
+                            <td></td>
+                            <td><input type="number" name="q17_tr" min="1" max="5" class="score-input"></td>
+                            <td></td>
+                        </tr>
+                        <!-- Pregunta 18 -->
+                        <tr>
+                            <td>18</td>
+                            <td>Frente a una tarea difícil, ¿tienes capacidad de concentración, de continuidad, de aguante?</td>
+                            <td></td>
+                            <td><input type="number" name="q18_tr" min="1" max="5" class="score-input"></td>
+                            <td></td>
+                        </tr>
+                        <!-- Pregunta 19 -->
+                        <tr>
+                            <td>19</td>
+                            <td>En la posición de jefe, ¿sabes dividir tareas, calcular tiempo para cada una, dar instrucciones cortas, exigir la ejecución?</td>
+                            <td></td>
+                            <td><input type="number" name="q19_tr" min="1" max="5" class="score-input"></td>
+                            <td></td>
+                        </tr>
+                        <!-- Pregunta 20 -->
+                        <tr>
+                            <td>20</td>
+                            <td>¿Te detienes a ponerle atención a una puesta de sol, a un pájaro o a un paisaje?</td>
+                            <td></td>
+                            <td></td>
+                            <td><input type="number" name="q20_ci" min="1" max="5" class="score-input"></td>
+                        </tr>
+                        <!-- Pregunta 21 -->
+                        <tr>
+                            <td>21</td>
+                            <td>¿Te atraen las aventuras, tareas desconocidas, iniciar algo que nadie hizo antes?</td>
+                            <td></td>
+                            <td><input type="number" name="q21_tr" min="1" max="5" class="score-input"></td>
+                            <td></td>
+                        </tr>
+                        <!-- Pregunta 22 -->
+                        <tr>
+                            <td>22</td>
+                            <td>¿Te autorizas a dudar de las informaciones de la TV, de personas de la política, de la religión o de la ciencia?</td>
+                            <td><input type="number" name="q22_sq" min="1" max="5" class="score-input"></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <!-- Pregunta 23 -->
+                        <tr>
+                            <td>23</td>
+                            <td>¿Logras transformar tus sueños e ideales en cosas concretas, realizaciones que progresan y duran?</td>
+                            <td></td>
+                            <td><input type="number" name="q23_tr" min="1" max="5" class="score-input"></td>
+                            <td></td>
+                        </tr>
+                        <!-- Pregunta 24 -->
+                        <tr>
+                            <td>24</td>
+                            <td>¿Tienes el hábito de pensar en el día de mañana, en el año próximo o en los próximos 10 años?</td>
+                            <td></td>
+                            <td></td>
+                            <td><input type="number" name="q24_ci" min="1" max="5" class="score-input"></td>
+                        </tr>
+                        <!-- Pregunta 25 -->
+                        <tr>
+                            <td>25</td>
+                            <td>¿Tienes facilidad con máquinas y aparatos como grabadoras, calculadoras, lavadoras, celulares, computadoras o autos?</td>
+                            <td></td>
+                            <td><input type="number" name="q25_tr" min="1" max="5" class="score-input"></td>
+                            <td></td>
+                        </tr>
+                        <!-- Pregunta 26 -->
+                        <tr>
+                            <td>26</td>
+                            <td>¿Eres rápido en lo que haces, te alcanza el tiempo más que el de tus colegas, terminas bien y a tiempo lo que empiezas?</td>
+                            <td></td>
+                            <td><input type="number" name="q26_tr" min="1" max="5" class="score-input"></td>
+                            <td></td>
+                        </tr>
+                        <!-- Pregunta 27 -->
+                       <tr>
+    <td>27</td>
+    <td>Cuando trabajas o te comunicas, ¿usas los números, estadísticas, porcentajes y matemáticas?</td>
+    <td><input type="number" name="q27_sq" min="1" max="5" class="score-input"></td> <!-- Solo este input -->
+    <td></td> <!-- Celda vacía -->
+    <td></td> <!-- Celda vacía -->
+</tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="2" class="resultado-label">Resultado (suma de calificaciones por cada columna)</td>
+                            <td><span id="sum_sq" class="result-value">0</span></td>
+                            <td><span id="sum_tr" class="result-value">0</span></td>
+                            <td><span id="sum_ci" class="result-value">0</span></td>
+                        </tr>
+                    </tfoot>
+                </table>
+
+                <div class="submit-area">
+                    <button type="button" onclick="calcularResultados()">Calcular Resultados</button>
+                </div>
+            </form>
+        </div>
+<!-- ... tu tabla y botón ... -->
+        </form>
+
+        <div class="chart-container" style="position: relative; height:40vh; width:80vw; margin: 20px auto;">
+            <canvas id="resultsChart"></canvas>
+        <!-- ... (código del canvas del gráfico) ... -->
+        <div class="chart-container" style="position: relative; height:40vh; width:80vw; margin: 20px auto;">
+            <canvas id="resultsChart"></canvas>
+        </div>
+
+        <!-- NUEVA SECCIÓN DE INFORMACIÓN DE LOS CEREBROS -->
+        <div class="brain-info-container">
+            <div class="brain-column">
+                <h3>CEREBRO IZQUIERDO (C.I)</h3>
+                <ul>
+                    <li>Atención selectiva, intencional, memorización.</li>
+                    <li>Comprensión y uso de normas.</li>
+                    <li>Comunicación verbal, volumen de vocabulario, corrección.</li>
+                    <li>Uso de números y medidas.</li>
+                    <li>Apresto para preguntar y contestar.</li>
+                    <li>Gusto por libros, lectura, curiosidad.</li>
+                    <li>Comprensión de órdenes, comandos, pedidos.</li>
+                    <li>Dominio de clasificaciones, relaciones.</li>
+                    <li>Capacidad de pedir, solicitar lo que quiere.</li>
+                    <li>Conexión de ideas, dispersión al narrar, grado de detalle.</li>
+                    <li>Autorización para la crítica, la divergencia.</li>
+                    <li>Moralismo, ética.</li>
+                    <li>Percepción de la realidad. Hábitos de aprendizaje.</li>
+                    <li>Uso de reloj, balanza, calendario.</li>
+                </ul>
+            </div>
+            <div class="brain-column">
+                <h3>CEREBRO CENTRAL (C.C)</h3>
+                <ul>
+                    <li>Funcionamiento de los sentidos.</li>
+                    <li>Coordinación de maxilares, labios, lengua, respiración.</li>
+                    <li>Coordinación motora amplia y fina. Gestos nerviosos.</li>
+                    <li>Modo de caminar, correr, sentarse, pararse, gesticular.</li>
+                    <li>Interés por el funcionamiento de juguetes, aparatos.</li>
+                    <li>Independencia en la ejecución de tareas. Liderazgo.</li>
+                    <li>Interés en iniciar, planear, dirigir actividades.</li>
+                    <li>Eficiencia en educación física, movimientos. Lateralidad.</li>
+                    <li>Puntualidad, precisión. Organización personal y de objetos.</li>
+                    <li>Resistencia física y mental. Autocontrol de la salud.</li>
+                    <li>Manifestación de sexualidad, de gula, de agresividad.</li>
+                    <li>Manualidades, disposición general para la acción.</li>
+                    <li>Participación en experiencias, trabajos. Disciplina.</li>
+                    <li>Expectativa de recompensa por lo que hace.</li>
+                    <li>Preocupación con el dinero, su manejo y poder de compra.</li>
+                </ul>
+            </div>
+            <div class="brain-column">
+                <h3>CEREBRO DERECHO (C.D)</h3>
+                <ul>
+                    <li>Percepción de sí mismo y de su cuerpo.</li>
+                    <li>Conocimiento de símbolos y señales.</li>
+                    <li>Interés por la religiosidad.</li>
+                    <li>Expresión artística, creatividad.</li>
+                    <li>Interés y asimilación de la televisión.</li>
+                    <li>Respeto por los valores maternos.</li>
+                    <li>Sensibilidad a la estimulación.</li>
+                    <li>Amistades, afectividad, relacionarse.</li>
+                    <li>Dominio de la fantasía, imaginación, sueño despierto.</li>
+                    <li>Timidez, extroversión, risa, humor, ludicidad.</li>
+                    <li>Vanidad, elegancia.</li>
+                    <li>Orientación espacial, danza, aplomo corporal.</li>
+                    <li>Hobbies particulares, gustos.</li>
+                    <li>Autoestima, susceptibilidad.</li>
+                    <li>Colores y sonidos preferidos.</li>
+                    <li>Capacidad de relax, concentración, alfa.</li>
+                </ul>
+            </div>
+        </div>
+        <!-- FIN DE LA NUEVA SECCIÓN -->
+
+    </div> <!-- Cierre de .test-container -->
+
+    <footer>
+        <!-- ... -->
+        </div>
+
+   
+
+    <script src="script.js"></script>
+
+</body>
+</html>
